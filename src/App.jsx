@@ -34,7 +34,8 @@ console.log("storeimage", storeImage)
         <div className="absolute inset-0 backdrop-blur bg-[rgba(0, 0, 0, 0.6)] z-0"></div>
         <div className="flex max-w-6xl w-full h-[50vh] gap-3 items-center justify-center z-10">
         {slideImage.map((item, index) => (
-          <div key={index} onClick={()=> handleClick(index)} className={`h-full rounded-2xl cursor-pointer overflow-hidden ${storeImage === index ? "w-[60%]" : "w-[10%]"}`}>
+          <div key={index} onClick={()=> handleClick(index)} className={`h-full rounded-2xl cursor-pointer overflow-hidden ${storeImage === index ? "w-[60%] opacity-100" : "w-[10%] opacity-50"}`}>
+            
             <img src={item.image} alt="" className="w-full h-full object-cover object-top" />
           </div>
         ))}
